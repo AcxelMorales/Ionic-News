@@ -1,0 +1,18 @@
+<ion-card color="light" *ngIf="n" class="animated fadeIn">
+  <ion-card-header>
+    <ion-card-subtitle>
+      <ion-icon name="logo-angular" color="tertiary"></ion-icon>
+      <span class="source-name">{{ n.source.name }}</span>
+      <div class="news-more">
+        <ion-button fill="clear" (click)="showMenu()">
+          <ion-icon class="c-t" slot="icon-only" name="more"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-subtitle>
+    <ion-card-title (click)="showNew()">{{ n.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-img class="animated fadeIn" (click)="showNew()" *ngIf="n.urlToImage" [src]="n.urlToImage"></ion-img>
+  <ion-card-content>
+    <p>{{ n.description }}</p>
+  </ion-card-content>
+</ion-card>

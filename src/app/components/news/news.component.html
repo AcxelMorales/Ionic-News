@@ -1,0 +1,16 @@
+<ion-grid fixed>
+  <ion-row *ngIf="ok">
+    <ion-col *ngFor="let n of news" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+      <app-new [inFavorites]="inFavorites" [n]="n"></app-new>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="!ok">
+    <ion-col *ngFor="let n of news" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+      <ion-skeleton-text width="100%"></ion-skeleton-text>
+      <ion-skeleton-text width="50%"></ion-skeleton-text>
+      <ion-skeleton-text width="50%"></ion-skeleton-text>
+      <ion-skeleton-text width="30%"></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>

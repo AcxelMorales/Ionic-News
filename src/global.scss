@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,115 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.source-name {
+  font-size: 12px;
+  color: lightgray;
+  margin-left: 0.5rem;
+}
+
+ion-segment-button {
+  background-color: var(--ion-color-light) !important;
+  color: var(--ion-color-dark) !important;
+}
+
+.segment-button-checked {
+  color: var(--ion-color-tertiary) !important;
+}
+
+ion-card-title {
+  font-size: 1rem;
+}
+
+.news-more {
+  font-size: 25px !important;
+  position: absolute;
+  right: -10px;
+  top: -18px;
+}
+
+.action-light {
+  color: var(--ion-color-tertiary) !important;
+
+  ion-icon {
+    color: var(--ion-color-tertiary) !important;
+  }
+}
+
+.action-danger {
+  color: var(--ion-color-danger) !important;
+
+  ion-icon {
+    color: var(--ion-color-danger) !important;
+  }
+}
+
+.c-f {
+  height: 25rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+
+  ion-card-header {
+    background-color: var(--ion-color-tertiary) !important;
+    margin-top: 1rem;
+
+    ion-card-title {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  ion-card-content {
+    padding: 2rem;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+.user-image {
+  width: 10rem !important;
+  margin: 0 auto;
+}
+
+.tab-selected {
+  color: white;
+}
+
+.c-t {
+  color: var(--ion-color-tertiary) !important;
+}
+
+// Animaciones
+.animated {
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

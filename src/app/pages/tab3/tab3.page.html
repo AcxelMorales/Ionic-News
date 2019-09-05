@@ -1,0 +1,21 @@
+<ion-header no-border translucent>
+  <ion-toolbar color="light">
+    <ion-title color="tertiary">
+      Ionic News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="c-f animated fadeIn" *ngIf="_dataService.news.length === 0">
+    <img src="../../../assets/img/user.png" alt="user-image" class="user-image">
+    <ion-card-header>
+      <ion-card-title>No data available</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      We recommend adding items to the favorites section.
+    </ion-card-content>
+  </ion-card>
+
+  <app-news [inFavorites]="true" [news]="_dataService.news" *ngIf="_dataService.news.length > 0"></app-news>
+</ion-content>

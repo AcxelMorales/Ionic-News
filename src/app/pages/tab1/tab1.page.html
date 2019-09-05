@@ -1,0 +1,16 @@
+<ion-header no-border translucent>
+  <ion-toolbar color="light">
+    <ion-title color="tertiary">
+      Ionic News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <app-news [news]="news"></app-news>
+
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
